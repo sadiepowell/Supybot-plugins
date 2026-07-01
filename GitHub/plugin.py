@@ -322,7 +322,7 @@ class GitHub(callbacks.Plugin):
                              '%s in %s on %s because I\'m not in %s.') %
                              (repo, channel, irc.network, channel))
 
-                if self.plugin.registryValue('ignore_bots', channel):
+                if self.plugin.registryValue('ignoreBots', channel):
                     if payload.get("sender", {}).get("type") == "Bot":
                         continue
 
